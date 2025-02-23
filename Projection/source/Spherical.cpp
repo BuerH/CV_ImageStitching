@@ -2,7 +2,7 @@
 // Created by star on 2/18/25.
 //
 
-#include "Projection/head/Spherical.h"
+#include "head/Spherical.h"
 cv::Mat getSphericalProjection (cv::Mat image, int focal) {
     // 检查图像是否成功读取
     if (image.empty()) {

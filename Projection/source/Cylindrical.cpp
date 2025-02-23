@@ -2,7 +2,7 @@
 // Created by star on 2/18/25.
 //
 
-#include "Projection/head/Cylindrical.h"
+#include "head/Cylindrical.h"
 
 cv::Mat getCylindricalProjection (cv::Mat image, int focal) {
     if (image.empty()) {

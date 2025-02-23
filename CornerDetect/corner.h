@@ -7,5 +7,6 @@
 
 #include "Harris/harris.h"
 #include "Shi_Tomas/shiTomas.h"
+#include "Fast/fast.h"
 
 #endif //CV_CORNER_H

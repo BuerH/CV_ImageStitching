@@ -6,9 +6,6 @@
 #define CV_SHITOMAS_H
 #include <opencv2/opencv.hpp>
 
-class shiTomas {
-
-};
 /**
  * 使用harris的改进方法进行检测
  * @param maxCorners 最大角点数量 默认为100

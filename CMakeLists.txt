@@ -12,17 +12,8 @@ if(NOT OpenCV_FOUND)
     message(FATAL_ERROR "OpenCV not found")
 endif()
 
-include_directories(. ${OpenCV_INCLUDE_DIRS})
+add_subdirectory(src)
+add_subdirectory(CornerDetect)
+add_subdirectory(Projection)
 
-add_executable(CV main.cpp
-        Projection/head/Spherical.h
-        Projection/source/Spherical.cpp
-        Projection/source/Cylindrical.cpp
-        CornerDetect/Harris/harris.h
-        CornerDetect/Harris/harris.cpp
-        CornerDetect/Shi_Tomas/shiTomas.h
-        CornerDetect/Shi_Tomas/shiTomas.cpp
-        Projection/projection.h
-        CornerDetect/corner.h)
-
-target_link_libraries(CV ${OpenCV_LIBRARIES} opencv_xfeatures2d)
+target_link_libraries(CV ${OpenCV_LIBRARIES} opencv_xfeatures2d CornerDetect Projection)

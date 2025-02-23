@@ -5,7 +5,7 @@
 #ifndef CV_PROJECTION_H
 #define CV_PROJECTION_H
 
-#include "Projection/head/Spherical.h"
-#include "Projection/head/Cylindrical.h"
+#include "head/Spherical.h"
+#include "head/Cylindrical.h"
 
 #endif //CV_PROJECTION_H

@@ -1,16 +1,15 @@
 #include <iostream>
-#include "Projection/projection.h"
-#include "CornerDetect/corner.h"
+#include "../Projection/projection.h"
+#include "../CornerDetect/corner.h"
 
 #ifndef FOCAL
 #define FOCAL 1000
 #endif
-using namespace cv;
 using namespace std;
 
 int main() {
     // 读取图像
-    Mat image = imread("/home/star/CLionProjects/SIFT/1.png", IMREAD_COLOR);
+    cv::Mat image = imread("/home/star/CLionProjects/SIFT/1.png", cv::IMREAD_COLOR);
 
     // 检查图像是否成功读取
     if (image.empty()) {
@@ -18,9 +17,9 @@ int main() {
         return -1;
     }
 
-    vector<KeyPoint> keyPoints;
+    vector<cv::KeyPoint> keyPoints;
     keyPoints = getKeyPointsByShi(image);
-    Mat keyPointImage;
+    cv::Mat keyPointImage;
     drawKeypoints(image, keyPoints, keyPointImage);
     imshow("Harris角点", keyPointImage);
 //    cv::Mat result_image = getSphericalProjection(image, FOCAL);
@@ -29,10 +28,8 @@ int main() {
     cv::Mat result_image = getCylindricalProjectionCommon(image, FOCAL);
 //    cv::Mat result_image = getCylindricalProjWithPara(image, FOCAL);
 
-
-
     imshow("关键点", result_image);
-    waitKey(0);
+    cv::waitKey(0);
 
     return 0;
 }
