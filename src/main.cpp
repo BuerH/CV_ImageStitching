@@ -5,11 +5,16 @@
 #ifndef FOCAL
 #define FOCAL 1000
 #endif
+
+//记得修改路径
+#ifndef TEST_IMAGE_PATH
+#define TEST_IMAGE_PATH "/home/star/CLionProjects/SIFT/1.png"
+#endif
 using namespace std;
 
 int main() {
     // 读取图像
-    cv::Mat image = imread("/home/star/CLionProjects/SIFT/1.png", cv::IMREAD_COLOR);
+    cv::Mat image = imread(TEST_IMAGE_PATH, cv::IMREAD_COLOR);
 
     // 检查图像是否成功读取
     if (image.empty()) {
