@@ -3,6 +3,7 @@ add_library(FeatureDetect
         SIFT/sift.h
         feature.h
         SURF/surf.cpp
+        SURF/surf.h
 )
 
 target_include_directories(FeatureDetect PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}) # 可选：如果 CornerDetect 有头文件需要暴露
