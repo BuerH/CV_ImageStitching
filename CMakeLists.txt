@@ -15,5 +15,6 @@ endif()
 add_subdirectory(src)
 add_subdirectory(CornerDetect)
 add_subdirectory(Projection)
+add_subdirectory(FeatureDetect)
 
-target_link_libraries(CV ${OpenCV_LIBRARIES} opencv_xfeatures2d CornerDetect Projection)
+target_link_libraries(CV ${OpenCV_LIBRARIES} opencv_xfeatures2d CornerDetect Projection FeatureDetect)

@@ -5,4 +5,6 @@
 #ifndef CV_FEATURE_H
 #define CV_FEATURE_H
 
+#include "SIFT/sift.h"
+
 #endif //CV_FEATURE_H
