@@ -6,5 +6,5 @@
 #define CV_FEATURE_H
 
 #include "SIFT/sift.h"
-
+#include "SURF/surf.h"
 #endif //CV_FEATURE_H
